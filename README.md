@@ -50,6 +50,95 @@ I searched for EC2 using the AWS Console search bar and selected the Amazon EC2 
 
 **Screenshot**
 
-![Step 1 - Search and Open EC2](screenshots/1.png)
+![Step 1 - Search and Open EC2](1.png)
 
-*Figure 1: Searching for Amazon EC2 in the AWS Management Console.*
+---
+
+## 🪜 Step 2: Open EC2 Instances
+
+1. Open the **Amazon EC2** dashboard.
+2. In the left-side navigation menu, find the **Instances** section.
+3. Click **Instances** to open the EC2 Instances page.
+
+**Description:**
+
+I opened the EC2 Instances section from the left navigation menu to view and manage virtual servers in the selected AWS Region.
+
+**Screenshot:**
+
+![Step 2 - EC2 Instances](2.png)
+
+---
+
+## 🪜 Step 3: Launch an EC2 Instance
+
+1. On the **EC2 Instances** page, click **Launch instances** in the top-right corner.
+2. The **Launch an instance** configuration page will open.
+
+**Description:**
+
+I clicked **Launch instances** to start configuring a new EC2 virtual server.
+
+**Screenshot:**
+
+![Step 3 - Launch EC2 Instance](3.png)
+
+---
+
+## 🪜 Step 4: Configure Instance Name and Select Amazon Linux AMI
+
+1. Under **Name and tags**, enter `MyServer` in the **Name** field.
+2. Under **Application and OS Images (Amazon Machine Image)**, select **Amazon Linux**.
+3. Review the selected AMI details.
+4. Continue to the next configuration section.
+
+**Description:**
+
+I entered `MyServer` as the EC2 instance name and selected Amazon Linux as the operating system. This helps identify the virtual server and defines the operating system used when launching the instance.
+
+**Screenshot:**
+
+![Step 4 - Configure Instance Name and Select AMI](4.png)
+
+---
+
+## 🪜 Step 5: Configure Key Pair and Network Settings
+
+1. Under **Key pair (login)**, click **Create new key pair**.
+2. Enter a name for the key pair and select the required key pair options.
+3. Create and download the key pair file securely.
+4. Under **Network settings**, review the network and subnet options.
+5. Keep **Create security group** selected to create a new security group.
+6. Review the **Allow SSH traffic from** setting.
+7. Before launching, restrict SSH access to your own IP address instead of **Anywhere**.
+
+**Description:**
+
+I configured the key pair required to connect securely to the EC2 instance. I also reviewed the network settings and selected the option to create a new security group. The security group controls incoming and outgoing network traffic to the instance.
+
+**Screenshot:**
+
+![Step 5 - Key Pair and Network Settings](5.png)
+
+---
+
+## 🔑 Step 6: Create an EC2 Key Pair
+
+1. In the **Key pair (login)** section, click **Create new key pair**.
+2. Enter `MyServer-Key` as the key pair name.
+3. Select **RSA** as the key pair type.
+4. Select `.pem` as the private key file format for OpenSSH.
+5. Click **Create key pair** to download the private key file.
+6. Store the downloaded `.pem` file in a safe location. You will need it to connect to your EC2 instance.
+
+**Description:**
+
+I created a key pair named `MyServer-Key` using RSA encryption and the `.pem` format. This key pair will help me securely connect to my EC2 instance.
+
+**Screenshot:**
+
+![Step 6 - Create EC2 Key Pair](6.png)
+
+Security tip: Never upload your .pem private key file to GitHub or share it publicly.
+
+---
